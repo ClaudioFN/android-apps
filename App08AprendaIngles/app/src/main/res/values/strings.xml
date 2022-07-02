@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">App08AprendaIngles</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="textVogais1">Vogais</string>
+    <string name="textNumeros">Números</string>
+    <string name="textVogais">Vogais</string>
+</resources>
