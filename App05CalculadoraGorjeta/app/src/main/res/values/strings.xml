@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">App05CalculadoraGorjeta</string>
+    <string name="dicaValorConta">Digite o Valor da Conta</string>
+    <string name="textoPorcentagem">0%</string>
+    <string name="textoValor">R$0.00</string>
+    <string name="textoGorjeta">Gorjeta</string>
+    <string name="textoTotal">Total</string>
+</resources>
