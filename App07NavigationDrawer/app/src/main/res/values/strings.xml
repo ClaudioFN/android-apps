@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">App07NavigationDrawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Principal</string>
+    <string name="menu_servicos">Serviços</string>
+    <string name="menu_clientes">Clientes</string>
+    <string name="menu_contato">Contato</string>
+    <string name="menu_sobre">Sobre</string>
+    <string name="navegacaoTitulo">ATM Consultoria</string>
+    <string name="navegacaoEmail">atmconsultoria@brasil.com.br</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="textoServicosTituloQualidade">Serviços de Gestão de Qualidade</string>
+    <string name="textoServicosDescricao1">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</string>
+    <string name="textoServicosIndicador">Indicadores de Serviços</string>
+    <string name="textoServicosIndicadoresTexto">Ut porttitor, erat eget commodo iaculis, purus lectus maximus eros, quis placerat lacus metus sed est. Nullam interdum sapien a eros mattis, nec fermentum orci hendrerit.Curabitur libero urna, molestie scelerisque nisi a, sodales euismod sapien. Maecenas lobortis nisi a nibh molestie, eu tincidunt nulla hendrerit. Vivamus aliquam et elit eget convallis. Proin pellentesque velit ex, vitae dapibus nunc sodales vel. Vivamus dui tellus, gravida et fermentum quis, porttitor ac est. Etiam sit amet justo egestas, suscipit nulla a, auctor est. Maecenas dapibus urna a ligula varius dictum. Maecenas non elit et velit fringilla dapibus.</string>
+    <string name="textoClientesTitulo">Clientes</string>
+    <string name="textoClientesDescricao">"Nam ex velit, malesuada quis urna blandit, suscipit ultrices dui. Cras mi odio, tempus at consequat sit amet, bibendum et elit. Vivamus vel eros et orci molestie faucibus non luctus ipsum. Mauris molestie sit amet justo nec rhoncus. Phasellus enim erat, elementum nec nulla non, interdum posuere risus. "</string>
+    <string name="textoClientesCliente1">Cielo</string>
+    <string name="textoClientesCliente">Braskem</string>
+    <string name="textoClientesCliente3">Gerdau</string>
+    <string name="textoClientesCliente4">Embraer</string>
+    <string name="textoClientesCliente5">Natura</string>
+    <string name="textoClientesCliente6">Submarino</string>
+    <string name="textoClientesCliente7">Microsoft</string>
+</resources>
