@@ -93,3 +93,12 @@ Aplicativos base [![apps](https://img.shields.io/badge/version-1.0.0-blue.svg)](
   > > Objetivo: Criar lista de tarefas que ficam salvas em banco de dados do aplicativo
   >```
   <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App10.gif" alt="Projeto 1" width="180" height="340">
+
+11. ConversorDeMoedas
+
+  > **Concluído:** :red_circle:
+  >```sh
+  > > Desenvolvimento: 28/05/2023
+  > > Objetivo: Efetuar a conversão da Moeda Corrente Real (Brasil) para a Moeda Corrente Euro (Europa) e Dólar (EUA) através dos dados fornecidos pela API 
+  >```
+  
