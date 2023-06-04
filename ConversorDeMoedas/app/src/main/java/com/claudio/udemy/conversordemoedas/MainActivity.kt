@@ -36,12 +36,11 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
-import java.io.Console
 
 val displayMetrics = DisplayMetrics()
 val errorMessage = "Text input too long"
 
-const val BASE_URL = "https://economia.awesomeapi.com.br/"
+const val BASE_URL = "https://economia.awesomeapi.com.br/last/"
 var valorDiaEuro = 0.0;
 var valorDiaDolar = 0.0;
 // SITE https://docs.awesomeapi.com.br/api-de-moedas
@@ -80,24 +79,36 @@ class MainActivity : ComponentActivity() {
     private fun getMyData() {
         val retrofitBuilder = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl(BASE_URL) // EUR-BRL  USD-BRL
+            .baseUrl(BASE_URL+"USD-BRL") // EUR-BRL  USD-BRL
             .build()
             .create(APIInterface::class.java)
-        Log.d("Inside getMyData 1", "1--")
+        Log.d("Inside getMyData", "--")
         val retrofitData = retrofitBuilder.getData()
-        Log.d("Inside getMyData 2", "2--")
-        retrofitData.enqueue(object : Callback<Result> {
-            override fun onResponse(call: Call<Result>?, response: Response<Result>?) {
-                val responseBody = response?.body()!!
+        Log.d("Inside getMyData", "--")
+        retrofitData.enqueue(object : Callback<Status> {
+            override fun onResponse(call: Call<Status>, response: Response<Status>) {
+                val responseBody = response.body()!!
+                Log.d("Message------------------------ ", responseBody.Message)
+                Log.d("RecordCount ", responseBody.RecordCount)
+                Log.d("Status ", responseBody.Status.toString())
 
-                Log.d("Message-->> ", response.body().toString())
-                var valorDiaDolar = responseBody.USDBRL.low.toDouble()
-                Log.d("Message valorDiaDolar-->> ", valorDiaDolar.toString())
-
+                for (i in 0 until responseBody.Result.size) {
+                    Log.d("code------------------------ ", responseBody.Result[i].code)
+                    Log.d("codein ", responseBody.Result[i].codein)
+                    Log.d("name ", responseBody.Result[i].name)
+                    Log.d("high ", responseBody.Result[i].high)
+                    Log.d("low ", responseBody.Result[i].low)
+                    Log.d("varBid ", responseBody.Result[i].varBid)
+                    Log.d("pctChange ", responseBody.Result[i].pctChange)
+                    Log.d("bid ", responseBody.Result[i].bid)
+                    Log.d("ask ", responseBody.Result[i].ask)
+                    Log.d("timestamp ", responseBody.Result[i].timestamp)
+                    Log.d("create_date ", responseBody.Result[i].create_date)
+                }
             }
 
-            override fun onFailure(call: Call<Result>, t: Throwable) {
-                Log.d(TAG, "getMyData-OnFailure: " + t.message)
+            override fun onFailure(call: Call<Status>, t: Throwable) {
+                Log.d(TAG, "OnFailure: " + t.message)
 
             }
         }
@@ -146,7 +157,7 @@ fun ValueTyped(){
             } else {
                 var dolar = 0.0
                 if (text.isNotEmpty()){
-                    dolar = text.toDouble() * valorDiaDolar
+                    dolar = text.toDouble() * 2
                 }
                 Text(text = "Valor em Dólar: $dolar",
                     Modifier
