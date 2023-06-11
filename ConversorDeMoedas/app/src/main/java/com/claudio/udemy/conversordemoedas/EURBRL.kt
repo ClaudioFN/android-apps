@@ -1,10 +1,10 @@
 package com.claudio.udemy.conversordemoedas
 /**
  * @author: Made by Claudio F. N.
- * USDBRL
- * This class is a data class for the Dollar coin
+ * EURBRL
+ * This class is a data class for the Euro coin
  */
-data class USDBRL(val code: String,
+data class EURBRL(val code: String,
                   val codein: String,
                   val name: String,
                   val high: String,

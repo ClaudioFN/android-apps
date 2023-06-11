@@ -96,9 +96,9 @@ Aplicativos base [![apps](https://img.shields.io/badge/version-1.0.0-blue.svg)](
 
 11. ConversorDeMoedas
 
-  > **Concluído:** :red_circle:
+  > **Concluído:** :green_circle:
   >```sh
-  > > Desenvolvimento: 28/05/2023
+  > > Desenvolvimento: 28/05/2023 - 10/06/2023
   > > Objetivo: Efetuar a conversão da Moeda Corrente Real (Brasil) para a Moeda Corrente Euro (Europa) e Dólar (EUA) através dos dados fornecidos pela API 
   >```
-  
+  <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App11.gif" alt="Projeto Conversor" width="180" height="340">  

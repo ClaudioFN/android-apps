@@ -4,117 +4,135 @@ package com.claudio.udemy.conversordemoedas
 
 import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.DisplayMetrics
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
-import com.claudio.udemy.conversordemoedas.ui.theme.ConversorDeMoedasTheme
-import android.util.DisplayMetrics
-import android.util.Log
-import retrofit2.converter.gson.GsonConverterFactory
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.width
-import androidx.compose.material3.ExperimentalMaterial3Api
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.lifecycle.ViewModel
+import androidx.core.graphics.toColorInt
+import com.claudio.udemy.conversordemoedas.ui.theme.ConversorDeMoedasTheme
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
+import retrofit2.converter.gson.GsonConverterFactory
 
-val displayMetrics = DisplayMetrics()
-val errorMessage = "Text input too long"
-
-const val BASE_URL = "https://economia.awesomeapi.com.br/last/"
-var valorDiaEuro = 0.0;
-var valorDiaDolar = 0.0;
+const val BASE_URL = "https://economia.awesomeapi.com.br/"
+var valorDiaEuro = getMyData("USD-BRL");
+var valorDiaDolar = getMyData("EUR-BRL");
 // SITE https://docs.awesomeapi.com.br/api-de-moedas
-// ORIGEM https://stackoverflow.com/questions/73265113/how-to-make-api-call-in-kotlin-using-retrofit-android-with-nested-json-apis
-// PESQUISA kotlin api call
+/**
+ * @author: Made by Claudio F. N.
+ *
+ * This class executes the main properties of the app
+ * Inherit from ComponentActivity
+ */
 class MainActivity : ComponentActivity() {
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+            setContent {
+                ConversorDeMoedasTheme {
+                    // App owner
+                    Surface(
+                        modifier = Modifier.fillMaxSize(),
+                        color = MaterialTheme.colorScheme.secondary
+                    ) {
+                        Greeting("Claudio")
+                        CenterMessage("Qual o valor em real(is)?")
+                    }
 
-        setContent {
-            ConversorDeMoedasTheme {
-                // App owner
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.secondary
-                ) {
-                    Greeting("Claudio")
-                    CenterMessage("Qual o valor em real(is)?")
-                }
-
-                // Type the value to be converted
-                Surface(
-                    modifier = Modifier
-                        .padding(100.dp, 180.dp)
-                        .fillMaxWidth()
-                ) {
-                    ValueTyped()
+                    Surface(
+                        modifier = Modifier
+                            .padding(100.dp, 195.dp)
+                            .fillMaxWidth()
+                    ) {
+                        // Type the value to be converted
+                        // Gets the API API DE MOEDAS to search for the Dollar and Euro values of the day
+                        // Convert the value
+                        // Show the value converted and the value of the coin in the day
+                        ValueTyped()
+                    }
                 }
             }
         }
-        getMyData()
-    }
+}
 
-    private fun getMyData() {
-        val retrofitBuilder = Retrofit.Builder()
-            .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl(BASE_URL+"USD-BRL") // EUR-BRL  USD-BRL
-            .build()
-            .create(APIInterface::class.java)
-        Log.d("Inside getMyData", "--")
-        val retrofitData = retrofitBuilder.getData()
-        Log.d("Inside getMyData", "--")
-        retrofitData.enqueue(object : Callback<Status> {
-            override fun onResponse(call: Call<Status>, response: Response<Status>) {
-                val responseBody = response.body()!!
-                Log.d("Message------------------------ ", responseBody.Message)
-                Log.d("RecordCount ", responseBody.RecordCount)
-                Log.d("Status ", responseBody.Status.toString())
-
-                for (i in 0 until responseBody.Result.size) {
-                    Log.d("code------------------------ ", responseBody.Result[i].code)
-                    Log.d("codein ", responseBody.Result[i].codein)
-                    Log.d("name ", responseBody.Result[i].name)
-                    Log.d("high ", responseBody.Result[i].high)
-                    Log.d("low ", responseBody.Result[i].low)
-                    Log.d("varBid ", responseBody.Result[i].varBid)
-                    Log.d("pctChange ", responseBody.Result[i].pctChange)
-                    Log.d("bid ", responseBody.Result[i].bid)
-                    Log.d("ask ", responseBody.Result[i].ask)
-                    Log.d("timestamp ", responseBody.Result[i].timestamp)
-                    Log.d("create_date ", responseBody.Result[i].create_date)
-                }
+/**
+ * Function getMyData
+ * @param idMoeda of the type String: is the identification of the coin (USD-BRL -> DOLLAR | EUR-BRL -> EURO)
+ * @return It will return the value in Double format of the day according to the selected coin
+ */
+private fun getMyData(idMoeda: String): Double {
+    val retrofitBuilder = Retrofit.Builder()
+        .addConverterFactory(GsonConverterFactory.create())
+        .baseUrl(BASE_URL)
+        .build()
+        .create(APIInterface::class.java)
+    // Teste to confirm which coin will be searched
+    // First Dollar
+    // Second Euro
+    if (idMoeda.equals("USD-BRL")){
+        val retrofitData = retrofitBuilder.getDataUSD(idMoeda)
+        retrofitData.enqueue(object : Callback<ResultUSD> {
+            override fun onResponse(call: Call<ResultUSD>?, response: Response<ResultUSD>?) {
+                val responseBody = response?.body()!!
+                Log.d("Message 1.1-->> ", response.body().toString())
+                valorDiaDolar = responseBody.USDBRL.low.toDouble()
+                Log.d("Message 2.1-->> ", valorDiaDolar.toString())
             }
 
-            override fun onFailure(call: Call<Status>, t: Throwable) {
-                Log.d(TAG, "OnFailure: " + t.message)
+            override fun onFailure(call: Call<ResultUSD>, t: Throwable) {
+                Log.d(TAG, "getMyData-OnFailure: " + t.message)
+
+            }
+        }
+        )
+    } else {
+        val retrofitData = retrofitBuilder.getDataEUR(idMoeda)
+        retrofitData.enqueue(object : Callback<ResultEUR> {
+            override fun onResponse(call: Call<ResultEUR>?, response: Response<ResultEUR>?) {
+                val responseBody = response?.body()!!
+                Log.d("Message 1.2-->> ", response.body().toString())
+                valorDiaEuro = responseBody.EURBRL.low.toDouble()
+                Log.d("Message 2.2-->> ", valorDiaEuro.toString())
+            }
+
+            override fun onFailure(call: Call<ResultEUR>, t: Throwable) {
+                Log.d(TAG, "getMyData-OnFailure: " + t.message)
 
             }
         }
         )
     }
+    var retValue = 0.0
+    if (idMoeda.equals("USD-BRL")){
+        retValue = valorDiaDolar
+    } else {
+        retValue = valorDiaEuro
+    }
 
+    return retValue
 }
 
 @Composable
@@ -123,7 +141,12 @@ fun Greeting(name: String) {
         Text(text = "Hi, my name is $name!", textAlign = TextAlign.Center)
     }
 }
-
+/**
+ * Function CenterMessage - It will return the box with the received text
+ * @param textInCenter of the type String: text to be shown in the designated area
+ * @param modifier of the type Modifier: already initiated with the value Modifier to allow configurations of
+ * position, size, color of the text, font size
+ */
 @Composable
 fun CenterMessage(textInCenter: String, modifier: Modifier = Modifier){
     Text(text = textInCenter,
@@ -131,63 +154,79 @@ fun CenterMessage(textInCenter: String, modifier: Modifier = Modifier){
             .padding(100.dp, 100.dp)
             .width(180.dp), Color.DarkGray, fontSize = 30.sp, textAlign = TextAlign.Center )
 }
-
+/**
+ * Function ValueTyped - It will return the box to be used as a typing place to the values to be converted. It also do the conversion.
+ */
 @Composable
 fun ValueTyped(){
     var text by remember { mutableStateOf("") }
     var isError by rememberSaveable { mutableStateOf(false) }
-    //var valueConvertedEuro by remember { mutableStateOf("") }
-    //var valueConvertedDolar by remember { mutableStateOf("") }
 
-
+    /**
+     * Function validate - It will address a Boolean value to the variable isError: TRUE if the text has letters and FALSE
+     * if the text does not have letters
+     * @param text of the type of String: text that was typed on the box created by ValueTyped
+     */
     fun validate(text: String) {
         isError = text.contains(regex = Regex("[a-zA-Z]"))
     }
 
+    Log.d("Message 4-->> ", valorDiaDolar.toString())
     OutlinedTextField(
-        value = text,
-        onValueChange = { text = it; validate(text)},
-        label = { Text("Digite o valor", textAlign = TextAlign.Center) },
+        value = text, // Text typed
+        onValueChange = { text = it; validate(text);}, // Call of the validation function
+        label = { Text("Digite o valor", textAlign = TextAlign.Center) }, // Place holder
         isError = isError,
-        supportingText = {
+        supportingText = { // If the text has letters, return message of error. If not, show the values converted
             if (isError) {
                 Text(
                     text = "Valor ${text} digitado tem letras!", fontSize = 10.sp, textAlign = TextAlign.Center
                 )
             } else {
+                // Lowest value of Dollar on the day
+                Text(text = "Valor do dólar hoje: $valorDiaDolar",
+                    Modifier
+                        .padding(10.dp, 50.dp)
+                        .width(350.dp), Color.Gray, fontSize = 21.sp, textAlign = TextAlign.Left )
+                // Convert the value typed from Real to Dollar
                 var dolar = 0.0
+                Log.d("Message 5-->> ", valorDiaDolar.toString())
                 if (text.isNotEmpty()){
-                    dolar = text.toDouble() * 2
+                    dolar = text.toDouble() / ( Math.round(valorDiaDolar * 100.0) / 100.0)
                 }
-                Text(text = "Valor em Dólar: $dolar",
+                // Round the value to only 2 decimal
+                dolar = ( Math.round(dolar * 100.0) / 100.0)
+                // Show the value converted
+                Text(text = "Valor em dólar: $dolar",
                     Modifier
                         .padding(10.dp, 100.dp)
-                        .width(350.dp), Color.Green, fontSize = 25.sp, textAlign = TextAlign.Left )
+                        .width(350.dp), Color("#A4D0A4".toColorInt()), fontSize = 25.sp, textAlign = TextAlign.Left )
+                // Lowest value of Euro on the day
+                Text(text = "Valor do euro hoje: $valorDiaEuro",
+                    Modifier
+                        .padding(10.dp, 150.dp)
+                        .width(400.dp), Color.Gray, fontSize = 21.sp, textAlign = TextAlign.Left )
+                //Convert the value typed from Real to Euro
                 var euro = 0.0
+                Log.d("Message 6-->> ", valorDiaEuro.toString())
                 if (text.isNotEmpty()){
-                    euro = text.toDouble() * 2
+                    euro = text.toDouble() / ( Math.round(valorDiaEuro * 100.0) / 100.0)
                 }
-                Text(text = "Valor em Euro: $euro",
+                // Round the value to only 2 decimal
+                euro = ( Math.round(euro * 100.0) / 100.0)
+                // Show the value converted
+                Text(text = "Valor em euro: $euro",
                     Modifier
                         .padding(10.dp, 200.dp)
-                        .width(400.dp), Color.Yellow, fontSize = 25.sp, textAlign = TextAlign.Left )
+                        .width(400.dp), Color("#F9D949".toColorInt()), fontSize = 25.sp, textAlign = TextAlign.Left )
             }
         }
     )
 }
-/*
-@Composable
-fun TextFieldText(textShow: String, horizontal: Int, valueToConvert: MySharedViewModel? = null, modifier: Modifier = Modifier){
 
-    Text(text = textShow,
-        modifier
-            .padding(10.dp, horizontal.dp)
-            .width(280.dp), Color.DarkGray, fontSize = 30.sp, textAlign = TextAlign.Center )
-}
-*/
-
-
-
+/**
+ * Function GeneralPreview - It will show a preview during the execution on the Android Studio. It calls all available functions
+ */
 @Preview(showBackground = true)
 @Composable
 fun GeneralPreview() {
