@@ -101,7 +101,7 @@ Aplicativos base [![apps](https://img.shields.io/badge/version-1.0.0-blue.svg)](
   > > Desenvolvimento: 28/05/2023 - 10/06/2023
   > > Objetivo: Efetuar a conversão da Moeda Corrente Real (Brasil) para a Moeda Corrente Euro (Europa) e Dólar (EUA) através dos dados fornecidos pela API 
   >```
-  <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App11.gif" alt="Projeto Conversor" width="180" height="340">  
+  <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App11.gif" alt="Projeto Conversor" width="180" height="340">
 
 12. GastoViagem
 
@@ -110,11 +110,13 @@ Aplicativos base [![apps](https://img.shields.io/badge/version-1.0.0-blue.svg)](
   > > Desenvolvimento: 18/06/2023 - 19/06/2023
   > > Objetivo: Calcular o gasto de uma viagem baseado em valores pré fixados para o cálculo unido aos valores de entrada
   >```
+  <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App12.gif" alt="Projeto Conversor" width="180" height="340">
 
 13. Motivation
 
-  > **Concluído:** :red_circle:
+  > **Concluído:** :green_circle:
   >```sh
-  > > Desenvolvimento: 22/06/2023
+  > > Desenvolvimento: 22/06/2023 - 29/06/2023
   > > Objetivo: Fornecer frases motivacionais separado por 3 abas e após inserir o nome do usuário para tratar pelo primeiro nome
   >```
+  <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App13.gif" alt="Projeto Conversor" width="180" height="340">
