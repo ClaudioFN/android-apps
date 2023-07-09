@@ -1,6 +1,6 @@
 # Android Apps
 
-Repositório de códigos Android de aplicativos desenvolvidos durante curso pago
+Repositório de códigos Android de aplicativos desenvolvidos durante cursos pagos dentro da plataforma
 
 Aplicativos base [![apps](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://semver.org)
 
@@ -94,6 +94,8 @@ Aplicativos base [![apps](https://img.shields.io/badge/version-1.0.0-blue.svg)](
   >```
   <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App10.gif" alt="Projeto 1" width="180" height="340">
 
+** Deste ponto em diante temos novos projetos do curso **
+
 11. ConversorDeMoedas
 
   > **Concluído:** :green_circle:
@@ -120,3 +122,11 @@ Aplicativos base [![apps](https://img.shields.io/badge/version-1.0.0-blue.svg)](
   > > Objetivo: Fornecer frases motivacionais separado por 3 abas e após inserir o nome do usuário para tratar pelo primeiro nome
   >```
   <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App13.gif" alt="Projeto Conversor" width="180" height="340">
+
+14. Convidados
+
+  > **Concluído:** :red_circle:
+  >```sh
+  > > Desenvolvimento: 04/07/2023 - 
+  > > Objetivo: Cadastrar a presença ou ausência de pessoas
+  >```
