@@ -125,8 +125,9 @@ Aplicativos base [![apps](https://img.shields.io/badge/version-1.0.0-blue.svg)](
 
 14. Convidados
 
-  > **Concluído:** :red_circle:
+  > **Concluído:** :green_circle:
   >```sh
-  > > Desenvolvimento: 04/07/2023 - 
+  > > Desenvolvimento: 04/07/2023 - 20/07/2023
   > > Objetivo: Cadastrar a presença ou ausência de pessoas
   >```
+  <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App14.gif" alt="Projeto Conversor" width="180" height="340">
