@@ -18,4 +18,6 @@
     <string name="menu_all_guests">Todos os Convidados</string>
     <string name="menu_present">Presentes</string>
     <string name="menu_absent">Ausentes</string>
+
+    <string name="row_guest_text">Convidados</string>
 </resources>
