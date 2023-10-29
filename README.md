@@ -140,7 +140,7 @@ Aplicativos base [![apps](https://img.shields.io/badge/version-1.1.0-blue.svg)](
 
 Dart: <a id="dart" href="https://dart.dev/overview"><img src="https://dart.dev/assets/img/logo_lockup_dart_horizontal.png" alt="Dart Programming Language" width="100" height="30"></a>
 
-Flutter: <a id="flutter" href="https://dart.dev/overview"><img src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg " alt="Dart Programming Language" width="100" height="30"></a>
+Flutter: <a id="flutter" href="https://flutter.dev/learn"><img src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg" alt="Flutter KIT" width="100" height="30"></a>
 
 <h1 align="center">
 <a id="codigos-criados" href="https://github.com/ClaudioFN/flutter_projects">Clique aqui para acessar códigos dos apps criados </a>
