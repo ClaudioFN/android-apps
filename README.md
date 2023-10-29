@@ -1,8 +1,9 @@
-# Android Apps
+# <img src="https://lh3.googleusercontent.com/TUZ68qCRW7rqu4AYQAfv5FZPjKBZ3qFjDftCbJiHUTuTZBoWRlMvr2jNsLApFZfBwgx5qopDDJVXoj9iaopQQp9K2FiXuOcN3g3bgpn0T_w_YjNXdQ" alt="android" width="80" height="30"> Android Apps 
 
-Repositório de códigos Android de aplicativos desenvolvidos durante cursos pagos dentro da plataforma
+Repositório de códigos Android de aplicativos desenvolvidos durante cursos pagos dentro da plataforma.
+Códigos em Dart com Flutter para Android e IOS depois do App 14.
 
-Aplicativos base [![apps](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://semver.org)
+Aplicativos base [![apps](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://semver.org)
 
 1. App01Sorteio: 
 
@@ -131,3 +132,16 @@ Aplicativos base [![apps](https://img.shields.io/badge/version-1.0.0-blue.svg)](
   > > Objetivo: Cadastrar a presença ou ausência de pessoas
   >```
   <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App14.gif" alt="Projeto Conversor" width="180" height="340">
+
+
+# Códigos Aplicativos Flutter Dart
+
+9 Aplicativos criados com Flutter Dart onde todos tem suas respectivas descrições e imagens de uso.
+
+Dart: <a id="dart" href="https://dart.dev/overview"><img src="https://dart.dev/assets/img/logo_lockup_dart_horizontal.png" alt="Dart Programming Language" width="100" height="30"></a>
+
+Flutter: <a id="flutter" href="https://dart.dev/overview"><img src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg " alt="Dart Programming Language" width="100" height="30"></a>
+
+<h1 align="center">
+<a id="codigos-criados" href="https://github.com/ClaudioFN/flutter_projects">Clique aqui para acessar códigos dos apps criados </a>
+</h1>
