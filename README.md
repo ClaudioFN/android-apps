@@ -12,8 +12,11 @@ Aplicativos base [![apps](https://img.shields.io/badge/version-1.1.0-blue.svg)](
   > > Desenvolvimento: 15/01/2022
   > > Objetivo: Ralizar sorteios de números de 0 a 10
   >```
-  <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App01.gif" alt="Projeto 1" width="180" height="340">
-
+  
+  <p align="center">
+    <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App01.gif" alt="Projeto 1" width="180" height="340">
+  </p>
+  
 2. App02Frases
 
   > **Concluído:** :green_circle:
@@ -21,7 +24,10 @@ Aplicativos base [![apps](https://img.shields.io/badge/version-1.1.0-blue.svg)](
   > > Desenvolvimento: 23/01/2022
   > > Objetivo: Exibir frases pré definidas de maneira aleatória
   >```
-  <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App02.gif" alt="Projeto 1" width="180" height="340">
+  
+  <p align="center">
+    <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App02.gif" alt="Projeto 1" width="180" height="340">
+  </p>
   
 3. App03Jokenpo
 
@@ -30,7 +36,10 @@ Aplicativos base [![apps](https://img.shields.io/badge/version-1.1.0-blue.svg)](
   > > Desenvolvimento: 24/01/2022
   > > Objetivo: Jogo Jokenpo com o sistema como adversário 
   >```
-  <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App03.gif" alt="Projeto 1" width="180" height="340">
+  
+  <p align="center">
+    <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App03.gif" alt="Projeto 1" width="180" height="340">
+  </p>
   
 4. App04AlcoolGasolina
 
@@ -39,7 +48,10 @@ Aplicativos base [![apps](https://img.shields.io/badge/version-1.1.0-blue.svg)](
   > > Desenvolvimento: 29/01/2022
   > > Objetivo: Usar cálculo específico para definir se é melhor usar álcool ou gasolina
   >```
-  <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App04.gif" alt="Projeto 1" width="180" height="340">
+  
+  <p align="center">
+    <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App04.gif" alt="Projeto 1" width="180" height="340">
+  </p>
   
 5. App05CalculadoraGorjeta
 
@@ -48,7 +60,10 @@ Aplicativos base [![apps](https://img.shields.io/badge/version-1.1.0-blue.svg)](
   > > Desenvolvimento: 30/01/2022
   > > Objetivo: Definir o valor específico da gorjeta e aplicar o valor da gorjeta no valor total da conta
   >```
-  <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App05.gif" alt="Projeto 1" width="180" height="340">
+  
+  <p align="center">
+    <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App05.gif" alt="Projeto 1" width="180" height="340">
+  </p>
   
 6. App06CaraCoroa
 
@@ -57,7 +72,10 @@ Aplicativos base [![apps](https://img.shields.io/badge/version-1.1.0-blue.svg)](
   > > Desenvolvimento: 03/02/2022
   > > Objetivo: Ao clicar em botão na tela, definir se exibe a moeda de 1 real com a face da cara ou da coroa voltada para cima
   >```
-  <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App06.gif" alt="Projeto 1" width="180" height="340">
+  
+  <p align="center">
+    <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App06.gif" alt="Projeto 1" width="180" height="340">
+  </p>
   
 7. App07NavigationDrawer
 
@@ -66,7 +84,10 @@ Aplicativos base [![apps](https://img.shields.io/badge/version-1.1.0-blue.svg)](
   > > Desenvolvimento: 06/02/2022
   > > Objetivo: Treinamento para aplicativo que tenha barra lateral para acesso de informações
   >```
-  <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App07.gif" alt="Projeto 1" width="180" height="340">
+  
+  <p align="center">
+    <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App07.gif" alt="Projeto 1" width="180" height="340">
+  </p>
   
 8. App08AprendaIngles
 
@@ -75,7 +96,10 @@ Aplicativos base [![apps](https://img.shields.io/badge/version-1.1.0-blue.svg)](
   > > Desenvolvimento: 10/02/2022
   > > Objetivo: Aplicativo com abas e imagens que ao serem clicadas, tocam som do item clicado para demonstrar sua pronúncia em inglês
   >```
-  <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App08.gif" alt="Projeto 1" width="180" height="340">
+  
+  <p align="center">
+    <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App08.gif" alt="Projeto 1" width="180" height="340">
+  </p>
   
 9. App09Anotacoes
 
@@ -84,7 +108,10 @@ Aplicativos base [![apps](https://img.shields.io/badge/version-1.1.0-blue.svg)](
   > > Desenvolvimento: 12/02/2022
   > > Objetivo: Registro de anotações que não somem quando o aplicativo é fechado
   >```
-  <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App09.gif" alt="Projeto 1" width="180" height="340">
+  
+  <p align="center">
+    <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App09.gif" alt="Projeto 1" width="180" height="340">
+  </p>
   
 10. App10ListaTarefas
 
@@ -93,9 +120,14 @@ Aplicativos base [![apps](https://img.shields.io/badge/version-1.1.0-blue.svg)](
   > > Desenvolvimento: 14/02/2022
   > > Objetivo: Criar lista de tarefas que ficam salvas em banco de dados do aplicativo
   >```
-  <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App10.gif" alt="Projeto 1" width="180" height="340">
+  
+  <p align="center">
+    <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App10.gif" alt="Projeto 1" width="180" height="340">
+  </p>
 
-** Deste ponto em diante temos novos projetos do curso **
+
+***<h2>Deste ponto em diante temos novos projetos do curso</h2>***
+
 
 11. ConversorDeMoedas
 
@@ -104,8 +136,11 @@ Aplicativos base [![apps](https://img.shields.io/badge/version-1.1.0-blue.svg)](
   > > Desenvolvimento: 28/05/2023 - 10/06/2023
   > > Objetivo: Efetuar a conversão da Moeda Corrente Real (Brasil) para a Moeda Corrente Euro (Europa) e Dólar (EUA) através dos dados fornecidos pela API 
   >```
-  <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App11.gif" alt="Projeto Conversor" width="180" height="340">
-
+  
+  <p align="center">
+    <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App11.gif" alt="Projeto Conversor" width="180" height="340">
+  </p>
+  
 12. GastoViagem
 
   > **Concluído:** :green_circle:
@@ -113,8 +148,11 @@ Aplicativos base [![apps](https://img.shields.io/badge/version-1.1.0-blue.svg)](
   > > Desenvolvimento: 18/06/2023 - 19/06/2023
   > > Objetivo: Calcular o gasto de uma viagem baseado em valores pré fixados para o cálculo unido aos valores de entrada
   >```
-  <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App12.gif" alt="Projeto Conversor" width="180" height="340">
-
+  
+  <p align="center">
+    <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App12.gif" alt="Projeto Conversor" width="180" height="340">
+  </p>
+  
 13. Motivation
 
   > **Concluído:** :green_circle:
@@ -122,8 +160,11 @@ Aplicativos base [![apps](https://img.shields.io/badge/version-1.1.0-blue.svg)](
   > > Desenvolvimento: 22/06/2023 - 29/06/2023
   > > Objetivo: Fornecer frases motivacionais separado por 3 abas e após inserir o nome do usuário para tratar pelo primeiro nome
   >```
-  <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App13.gif" alt="Projeto Conversor" width="180" height="340">
-
+  
+  <p align="center">
+    <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App13.gif" alt="Projeto Conversor" width="180" height="340">
+  </p>
+  
 14. Convidados
 
   > **Concluído:** :green_circle:
@@ -131,8 +172,10 @@ Aplicativos base [![apps](https://img.shields.io/badge/version-1.1.0-blue.svg)](
   > > Desenvolvimento: 04/07/2023 - 20/07/2023
   > > Objetivo: Cadastrar a presença ou ausência de pessoas
   >```
-  <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App14.gif" alt="Projeto Conversor" width="180" height="340">
-
+  
+  <p align="center">
+    <img src="https://github.com/ClaudioFN/android-apps/blob/main/ImagensGIF/App14.gif" alt="Projeto Conversor" width="180" height="340">
+  </p>
 
 # Códigos Aplicativos Flutter Dart
 
